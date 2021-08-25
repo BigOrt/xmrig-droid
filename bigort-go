@@ -1,6 +1,7 @@
 #!/bin/sh — Execute the file using sh, the Bourne shell, or a compatible shell
 echo 'updating package ....'
-pkg update
+pkg update -y
+pkg update -y
 
 echo 'install wget, git and package ....'
 pkg install git -y
