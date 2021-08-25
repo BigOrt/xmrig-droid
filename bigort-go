@@ -17,7 +17,7 @@ cd xmrig && mkdir build && cd build
 
 
 echo 'cmake build ..'
-cmake ..
+cmake .. -DWITH_HWLOC=OFF
 make
 
 echo 'copy xmrig ....'
