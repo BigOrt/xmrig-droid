@@ -27,7 +27,7 @@ cd
 
 read -p 'Input xmrig command example ^ -o blablabla^: 'var
 
-echo ./xmrig/xmrig $var >> go
+echo './xmrig/xmrig $var' >> go
 
 chmod +x go
 
