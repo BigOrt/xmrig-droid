@@ -1,0 +1,35 @@
+#!/bin/sh — Execute the file using sh, the Bourne shell, or a compatible shell
+echo 'updating package ....'
+pkg update
+
+echo 'install wget, git and package ....'
+pkg install git -y
+pkg install wget -y 
+pkg install vim -y 
+pkg install cmake git libuv* openssl-dev unstable-repo -y
+pkg install libmicrohttpd-dev -y
+
+
+echo 'get repo from github ...'
+git clone https://github.com/xmrig/xmrig
+cd xmrig && mkdir build && cd build
+
+
+echo 'cmake build ..'
+cmake ..
+make
+
+echo 'copy xmrig ....'
+
+cp xmrig ..
+
+cd 
+
+read -p 'Input xmrig command example ^ -o blablabla^: 'var
+
+echo ./xmrig/xmrig $var >> go
+
+chmod +x go
+
+sh go
+
