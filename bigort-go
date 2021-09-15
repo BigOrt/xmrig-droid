@@ -87,6 +87,7 @@ echo "---------------------------"
 read -p "IS YOUR ANDROID ROOT? y/n: " var
 i=0
 while [ $i = 0 ]
+do
      case $var in
           [yY])
                sleep 1
@@ -114,4 +115,5 @@ while [ $i = 0 ]
                 i=0
                 ;;
       esac
+     done
 
