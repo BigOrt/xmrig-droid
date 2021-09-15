@@ -2,6 +2,7 @@
 echo '----------------------'
 echo 'deleting prev file ...'
 echo '--------------------->'
+sleep 2
 rm -rf bigort-go
 rm -rf go
 rm -rf xmrig
