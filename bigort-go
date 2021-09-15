@@ -82,15 +82,20 @@ cd
 echo "./xmrig/xmrig" >> go
 
 chmod +x go
-
-#read -p 'IS YOUR ANDROID ROOT? y/n: ' root
-
-#if [$root = 'y']
-#then
- # su
-  #sleep 1
-  #sh go
-#fi
-
-sh go
+sleep 1
+read -p "IS YOUR ANDROID ROOT? y/n: " var
+case $var in
+     [yY])
+          echo "root"
+          sleep 2
+          su
+          sh go
+          break
+          ;;
+      [nN])
+          echo "not root"
+          sleep 2
+          sh go
+          ;;
+ esac
 
