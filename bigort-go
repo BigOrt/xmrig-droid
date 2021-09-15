@@ -84,10 +84,10 @@ echo "./xmrig/xmrig" >> go
 chmod +x go
 sleep 1
 echo "---------------------------"
-read -p "IS YOUR ANDROID ROOT? y/n: " var
 i=0
 while [ $i = 0 ]
 do
+     read -p "IS YOUR ANDROID ROOT? y/n: " var
      case $var in
           [yY])
                sleep 1
