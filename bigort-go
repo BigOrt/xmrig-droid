@@ -82,5 +82,14 @@ echo "./xmrig/xmrig" >> go
 
 chmod +x go
 
+read -p 'IS YOUR ANDROID ROOT? y/n: ' root
+
+if [$root = 'y']
+then
+  su
+  sleep 1
+  sh go
+fi
+
 sh go
 
