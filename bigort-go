@@ -1,31 +1,46 @@
 #!/bin/sh — Execute the file using sh, the Bourne shell, or a compatible shell
+echo '----------------------'
+echo 'deleting prev file ...'
+echo '--------------------->'
+rm -rf bigort-go
+rm -rf go
+rm -rf xmrig
+
+echo '---------------------'
 echo 'updating package ....'
-sleep 1
+echo '-------------------->'
+sleep 2
 pkg update -y
 pkg update -y
 
+echo '----------------------------------'
 echo 'install wget, git and package ....'
-sleep 1
+echo '--------------------------------->'
+sleep 2
 pkg install git -y
 pkg install wget -y 
 pkg install vim -y 
 pkg install cmake git libuv* openssl-dev unstable-repo -y
 pkg install libmicrohttpd-dev -y
 
-
+echo '------------------------'
 echo 'get repo from github ...'
-sleep 1
+echo '----------------------->'
+sleep 2
 git clone https://github.com/xmrig/xmrig
 cd xmrig && mkdir build && cd build
 
-
+echo '--------------'
 echo 'cmake build ..'
-sleep 1
+echo '------------->'
+sleep 2
 cmake .. -DWITH_HWLOC=OFF
 make
 
+echo '---------------'
 echo 'copy xmrig ....'
-sleep 1
+echo '-------------->'
+sleep 2
 cp xmrig ..
 
 cd ..
