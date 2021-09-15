@@ -51,11 +51,17 @@ echo "--------------------------------"
 pwd
 echo "--------------------------------"
 sleep 2
-echo "DOWNLOADING config.json ..............."
+echo "--------------------------------"
+echo "DOWNLOADING config.json .......>"
+echo "--------------------------------"
 sleep 2
 wget https://raw.githubusercontent.com/xmrig/xmrig/master/src/config.json
+echo "-----------------------------------------"
+echo "configure xmrig to mine on unmineable.com"
+echo "-----------------------------------------"
+sleep 3
 read -p 'SERVER MINING: ' serv
-read -p 'COIN: ' coin
+read -p 'COIN (with capital letter: TRX or etc) : ' coin
 read -p 'YOUR WALLET ADDRESS: ' wallet
 read -p 'YOUR WORKER NAME:' worker
 
