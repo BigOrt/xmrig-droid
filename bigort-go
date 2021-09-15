@@ -86,16 +86,20 @@ sleep 1
 read -p "IS YOUR ANDROID ROOT? y/n: " var
 case $var in
      [yY])
-          echo "root"
           sleep 2
-          su
-          sh go
-          break
+          echo "if your android root just type: "
+          echo "--------------------------------"
+          echo "su"
+          echo "sh go"
+          echo "--------------------------------"
           ;;
       [nN])
-          echo "not root"
           sleep 2
-          sh go
+          echo "if your android root just type: "
+          echo "--------------------------------"
+          echo "su"
+          echo "sh go"
+          echo "--------------------------------"
           ;;
  esac
 
