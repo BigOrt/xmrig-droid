@@ -83,6 +83,7 @@ echo "./xmrig/xmrig" >> go
 
 chmod +x go
 sleep 1
+echo
 echo "---------------------------"
 i=0
 while [ $i = 0 ]
