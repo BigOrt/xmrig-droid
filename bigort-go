@@ -97,7 +97,6 @@ case $var in
           sleep 2
           echo "if your android root just type: "
           echo "--------------------------------"
-          echo "su"
           echo "sh go"
           echo "--------------------------------"
           ;;
