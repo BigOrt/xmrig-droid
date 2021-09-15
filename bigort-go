@@ -24,11 +24,35 @@ echo 'copy xmrig ....'
 
 cp xmrig ..
 
-cd 
+cd ..
 
-read -p 'Input xmrig command example ^ -o bla..bla..bla.. ^: ' var
+sleep 2
+echo "--------------------------------"
+pwd
+echo "--------------------------------"
+sleep 2
+echo "DOWNLOADING config.json ..............."
+sleep 2
+wget https://raw.githubusercontent.com/xmrig/xmrig/master/src/config.json
+read -p 'SERVER MINING: ' serv
+read -p 'COIN: ' coin
+read -p 'YOUR WALLET ADDRESS: ' wallet
+read -p 'YOUR WORKER NAME:' worker
 
-echo "./xmrig/xmrig $var" >> go
+echo "--------------------------------------------"
+sleep 2
+echo "EDITING config.json ....!"
+sleep 2
+echo "-------------------------------------------->"
+sed -i 's/url/'$serv'/' config.json
+sed -i "s/user/$coin:$wallet.$worker/" config.json
+
+sleep 2
+sed -n '63,70p' config.json
+
+cd
+
+echo "./xmrig/xmrig" >> go
 
 chmod +x go
 
