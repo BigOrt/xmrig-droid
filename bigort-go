@@ -96,6 +96,7 @@ do
                echo "su"
                echo "sh go"
                echo "--------------------------------"
+               echo
                i=1
                break
                ;;
@@ -105,13 +106,15 @@ do
                echo "--------------------------------"
                echo "sh go"
                echo "--------------------------------"
+               echo
                i=2
                break
                ;;
            *)
                 sleep 1
-                echo "-----------------------"
+                echo "------------------------------"
                 echo "you need to answer y/n or Y/N!"
+                echo
                 i=0
                 ;;
       esac
