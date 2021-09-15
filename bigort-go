@@ -92,6 +92,8 @@ do
      case $var in
           [yY])
                sleep 1
+               echo "---------------------------"
+               echo
                echo "if your android ROOT just type: "
                echo "--------------------------------"
                echo "su"
@@ -103,6 +105,8 @@ do
                ;;
            [nN])
                sleep 1
+               echo "---------------------------"
+               echo
                echo "if your android NOT ROOT just type: "
                echo "--------------------------------"
                echo "sh go"
