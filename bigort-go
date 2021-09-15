@@ -110,8 +110,8 @@ do
                ;;
            *)
                 sleep 1
-                echo "-----------------------
-                echo "you need to answer y/n or Y/N!
+                echo "-----------------------"
+                echo "you need to answer y/n or Y/N!"
                 i=0
                 ;;
       esac
