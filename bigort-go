@@ -91,7 +91,7 @@ do
      case $var in
           [yY])
                sleep 1
-               echo "if your android root just type: "
+               echo "if your android ROOT just type: "
                echo "--------------------------------"
                echo "su"
                echo "sh go"
@@ -101,7 +101,7 @@ do
                ;;
            [nN])
                sleep 1
-               echo "if your android root just type: "
+               echo "if your android NOT ROOT just type: "
                echo "--------------------------------"
                echo "sh go"
                echo "--------------------------------"
