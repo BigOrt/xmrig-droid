@@ -1,9 +1,11 @@
 #!/bin/sh — Execute the file using sh, the Bourne shell, or a compatible shell
 echo 'updating package ....'
+sleep 1
 pkg update -y
 pkg update -y
 
 echo 'install wget, git and package ....'
+sleep 1
 pkg install git -y
 pkg install wget -y 
 pkg install vim -y 
@@ -12,16 +14,18 @@ pkg install libmicrohttpd-dev -y
 
 
 echo 'get repo from github ...'
+sleep 1
 git clone https://github.com/xmrig/xmrig
 cd xmrig && mkdir build && cd build
 
 
 echo 'cmake build ..'
+sleep 1
 cmake .. -DWITH_HWLOC=OFF
 make
 
 echo 'copy xmrig ....'
-
+sleep 1
 cp xmrig ..
 
 cd ..
