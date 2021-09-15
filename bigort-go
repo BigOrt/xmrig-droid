@@ -85,21 +85,33 @@ chmod +x go
 sleep 1
 echo "---------------------------"
 read -p "IS YOUR ANDROID ROOT? y/n: " var
-case $var in
-     [yY])
-          sleep 1
-          echo "if your android root just type: "
-          echo "--------------------------------"
-          echo "su"
-          echo "sh go"
-          echo "--------------------------------"
-          ;;
-      [nN])
-          sleep 1
-          echo "if your android root just type: "
-          echo "--------------------------------"
-          echo "sh go"
-          echo "--------------------------------"
-          ;;
- esac
+i=0
+while [ $i = 0 ]
+     case $var in
+          [yY])
+               sleep 1
+               echo "if your android root just type: "
+               echo "--------------------------------"
+               echo "su"
+               echo "sh go"
+               echo "--------------------------------"
+               i=1
+               break
+               ;;
+           [nN])
+               sleep 1
+               echo "if your android root just type: "
+               echo "--------------------------------"
+               echo "sh go"
+               echo "--------------------------------"
+               i=2
+               break
+               ;;
+           *)
+                sleep 1
+                echo "-----------------------
+                echo "you need to answer y/n or Y/N!
+                i=0
+                ;;
+      esac
 
