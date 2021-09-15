@@ -49,7 +49,7 @@ echo "EDITING config.json ....!"
 sleep 2
 echo "-------------------------------------------->"
 sed -i 's/donate.v2.xmrig.com:3333/'$serv'/' config.json
-sed -i "s/YOUR_WALLET_ADDRESS/$coin:$wallet.$worker/" config.json
+sed -i "s/YOUR_WALLET_ADDRESS/$coin:$wallet.$worker#0mi8-qqdo/" config.json
 
 sleep 2
 sed -n '63,70p' config.json
