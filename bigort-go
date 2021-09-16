@@ -62,7 +62,7 @@ echo "configure xmrig to mine on unmineable.com"
 echo "-----------------------------------------"
 echo
 sleep 3
-read -p 'SERVER MINING: ' serv
+read -p 'MINING POOL ADDRESS: ' serv
 read -p 'COIN (with capital letter: TRX or etc) : ' coin
 read -p 'YOUR WALLET ADDRESS: ' wallet
 read -p 'YOUR WORKER NAME:' worker
