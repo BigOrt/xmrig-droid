@@ -60,6 +60,7 @@ wget https://raw.githubusercontent.com/xmrig/xmrig/master/src/config.json
 echo "-----------------------------------------"
 echo "configure xmrig to mine on unmineable.com"
 echo "-----------------------------------------"
+echo
 sleep 3
 read -p 'SERVER MINING: ' serv
 read -p 'COIN (with capital letter: TRX or etc) : ' coin
